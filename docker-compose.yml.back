@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    container_name: php-calculator-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/app
+      - vendor:/app/vendor
+    working_dir: /app
+
+volumes:
+  vendor:
